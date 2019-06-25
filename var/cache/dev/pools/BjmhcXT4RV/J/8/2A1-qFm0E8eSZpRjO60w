@@ -8,7 +8,7 @@
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    'blog/12',
+                    'blog/{id}',
                 ],
                 'name' => [
                     'blog_show',

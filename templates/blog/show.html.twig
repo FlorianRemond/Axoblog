@@ -1,19 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<article>
-    <h2>Titre de l'article </h2>
-    <div class= "metadata">Ecrit le tanani tanana</div>
-    <div content>
-        <img src="http://placehold.it/350x150" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem corporis, doloribus eaque illo magnam voluptatum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium impedit non quos tempora ullam ut!</p>
-        <hr>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut, blanditiis eum libero magnam nobis
-            quod repellat saepe ullam unde! Ad aliquam aliquid beatae molestias neque, numquam quasi quia sed. Autem et
-            excepturi facere, hic in ipsam laudantium minus optio provident quae quam quis sunt! Earum illo nam
-            praesentium quam!</p>
-    </div>
-</article>
+        <article>
+            <h2 >{{ article.title }} </h2>
+            <div class="metadata"> Ecrit le {{ article.createdAt | date('d/m/Y') }} à {{ article.createdAt | date ('H:i') }}</div>
+            <div content>
+                <img src='{{ article.image }}' alt="">
+                {{ article.content | raw }}
+            </div>
+        </article>
+
 {% endblock %}

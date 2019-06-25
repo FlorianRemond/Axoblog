@@ -55,7 +55,7 @@ class __TwigTemplate_ce52b514abfdec6846dfba9a80ed48604eb743087630bb59492ba91afd4
 
     }
 
-    // line 4
+    // line 2
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -65,7 +65,7 @@ class __TwigTemplate_ce52b514abfdec6846dfba9a80ed48604eb743087630bb59492ba91afd4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Hello BlogController!";
+        echo "Hello Axobloger!";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -74,7 +74,7 @@ class __TwigTemplate_ce52b514abfdec6846dfba9a80ed48604eb743087630bb59492ba91afd4
 
     }
 
-    // line 6
+    // line 4
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,25 +84,39 @@ class __TwigTemplate_ce52b514abfdec6846dfba9a80ed48604eb743087630bb59492ba91afd4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 7
+        // line 5
+        echo "    ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 7, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 5, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-            // line 8
+            // line 6
             echo "        <article>
-            <h2 >Titre de l'article </h2>
-            <div class= \"metadata\">Ecrit le tanani tanana</div>
+            <h2 >";
+            // line 7
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "title", [], "any", false, false, false, 7), "html", null, true);
+            echo " </h2>
+            <div class=\"metadata\"> Ecrit le ";
+            // line 8
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "createdAt", [], "any", false, false, false, 8), "d/m/Y"), "html", null, true);
+            echo " à ";
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "createdAt", [], "any", false, false, false, 8), "H:i"), "html", null, true);
+            echo "</div>
             <div content>
-                <img src=\"http://placehold.it/350x150\" alt=\"\">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem corporis, doloribus eaque illo magnam voluptatum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium impedit non quos tempora ullam ut!</p>
+                <img src='";
+            // line 10
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "image", [], "any", false, false, false, 10), "html", null, true);
+            echo "' alt=\"\">
+                ";
+            // line 11
+            echo twig_get_attribute($this->env, $this->source, $context["article"], "content", [], "any", false, false, false, 11);
+            echo "
             </div>
             <a href=\"";
-            // line 16
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog_show");
+            // line 13
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog_show", ["id" => twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 13)]), "html", null, true);
             echo "\" class=\"btn btn-primary\">Lire la suite</a>
         </article>
-";
+    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
@@ -127,29 +141,26 @@ class __TwigTemplate_ce52b514abfdec6846dfba9a80ed48604eb743087630bb59492ba91afd4
 
     public function getDebugInfo()
     {
-        return array (  102 => 16,  92 => 8,  88 => 7,  78 => 6,  59 => 4,  36 => 1,);
+        return array (  116 => 13,  111 => 11,  107 => 10,  100 => 8,  96 => 7,  93 => 6,  88 => 5,  78 => 4,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
-
-
-{% block title %}Hello BlogController!{% endblock %}
+{% block title %}Hello Axobloger!{% endblock %}
 
 {% block body %}
-{% for article in articles %}
+    {% for article in articles %}
         <article>
-            <h2 >Titre de l'article </h2>
-            <div class= \"metadata\">Ecrit le tanani tanana</div>
+            <h2 >{{ article.title }} </h2>
+            <div class=\"metadata\"> Ecrit le {{ article.createdAt | date('d/m/Y') }} à {{ article.createdAt | date ('H:i') }}</div>
             <div content>
-                <img src=\"http://placehold.it/350x150\" alt=\"\">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem corporis, doloribus eaque illo magnam voluptatum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium impedit non quos tempora ullam ut!</p>
+                <img src='{{ article.image }}' alt=\"\">
+                {{ article.content | raw }}
             </div>
-            <a href=\"{{ path ('blog_show') }}\" class=\"btn btn-primary\">Lire la suite</a>
+            <a href=\"{{ path('blog_show', {'id': article.id}) }}\" class=\"btn btn-primary\">Lire la suite</a>
         </article>
-{% endfor %}
+    {% endfor %}
 {% endblock %}
 ", "blog/index.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\Axoblog\\templates\\blog\\index.html.twig");
     }

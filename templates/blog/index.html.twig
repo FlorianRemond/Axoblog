@@ -1,19 +1,16 @@
 {% extends 'base.html.twig' %}
-
-
-{% block title %}Hello BlogController!{% endblock %}
+{% block title %}Hello Axobloger!{% endblock %}
 
 {% block body %}
-{% for article in articles %}
+    {% for article in articles %}
         <article>
-            <h2 >Titre de l'article </h2>
-            <div class= "metadata">Ecrit le tanani tanana</div>
+            <h2 >{{ article.title }} </h2>
+            <div class="metadata"> Ecrit le {{ article.createdAt | date('d/m/Y') }} à {{ article.createdAt | date ('H:i') }}</div>
             <div content>
-                <img src="http://placehold.it/350x150" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem corporis, doloribus eaque illo magnam voluptatum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium impedit non quos tempora ullam ut!</p>
+                <img src='{{ article.image }}' alt="">
+                {{ article.content | raw }}
             </div>
-            <a href="{{ path ('blog_show') }}" class="btn btn-primary">Lire la suite</a>
+            <a href="{{ path('blog_show', {'id': article.id}) }}" class="btn btn-primary">Lire la suite</a>
         </article>
-{% endfor %}
+    {% endfor %}
 {% endblock %}
