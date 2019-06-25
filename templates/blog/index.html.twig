@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Hello BlogController!{% endblock %}
+
+{% block body %}
+
+        <article>
+            <h2 >Titre de l'article </h2>
+            <div class= "metadata">Ecrit le tanani tanana</div>
+            <div content>
+                <img src="http://placehold.it/350x150" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem corporis, doloribus eaque illo magnam voluptatum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium impedit non quos tempora ullam ut!</p>
+            </div>
+            <a href="{{ path ('blog_show') }}" class="btn btn-primary">Lire la suite</a>
+        </article>
+        <br>
+        <article>
+            <h2 >Titre de l'article </h2>
+            <div class= "metadata">Ecrit le tanani tanana</div>
+            <div content>
+                <img src="http://placehold.it/350x150" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem corporis, doloribus eaque illo magnam voluptatum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium impedit non quos tempora ullam ut!</p>
+            </div>
+            <a href="{{ path ('blog_show') }}" class="btn btn-primary">Lire la suite</a>
+        </article>
+        <br>
+        <article>
+            <h2 >Titre de l'article </h2>
+            <div class= "metadata">Ecrit le tanani tanana</div>
+            <div content>
+                <img src="http://placehold.it/350x150" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem corporis, doloribus eaque illo magnam voluptatum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium impedit non quos tempora ullam ut!</p>
+            </div>
+            <a href="{{ path ('blog_show') }}" class="btn btn-primary">Lire la suite</a>
+        </article>
+{% endblock %}

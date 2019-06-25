@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Axoblog",
+    "\\bin",
+    "\\config",
+    "\\config\\packages",
+    "\\config\\routes",
+    "\\src",
+    "\\src\\Controller"
+  ],
+  "SelectedNode": "\\src\\Controller\\BlogController.php",
+  "PreviewInSolutionExplorer": false
+}
