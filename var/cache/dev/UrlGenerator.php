@@ -17,7 +17,8 @@ return [
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception::cssAction'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     'blog' => [[], ['_controller' => 'App\\Controller\\BlogController::index'], [], [['text', '/blog']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\BlogController::home'], [], [['text', '/']], [], []],
-    'blog_create' => [[], ['_controller' => 'App\\Controller\\BlogController::creation'], [], [['text', '/blog/create']], [], []],
+    'blog_create' => [[], ['_controller' => 'App\\Controller\\BlogController::form'], [], [['text', '/blog/create']], [], []],
+    'blog_edit' => [['id'], ['_controller' => 'App\\Controller\\BlogController::form'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/blog']], [], []],
     'blog_show' => [['id'], ['_controller' => 'App\\Controller\\BlogController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/blog/show']], [], []],
     'exit' => [[], ['_controller' => 'App\\Controller\\ExitController::index'], [], [['text', '/exit']], [], []],
 ];

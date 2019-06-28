@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Form\ArticleType;
 use App\Repository\ArticleRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -41,17 +42,27 @@ class BlogController extends AbstractController
 
 
     /**
-     * @Route("/blog/create",name="blog_create")
+     * @Route("/blog/create", name="blog_create")
+     * @Route("/blog/{id}/edit", name="blog_edit")
+     *
      */
-    public function creation (Request $request, ObjectManager $manager){
-        $article = new Article();
+    public function form (Article $article=null,Request $request, ObjectManager $manager){
 
-        //formulaire lié à l'article
-        $form = $this -> createFormBuilder($article)
-                ->add('title')
-                ->add('content')
-                ->add('image')
-                ->getForm();
+        if(!$article){
+            $article = new Article();
+        }
+        //grace au formtype par besoin de définir ici le constructeur
+        //reprise de la meme fonction pour modifier
+       //formulaire lié à l'article
+        //$form = $this -> createFormBuilder($article)
+        //        ->add('title')
+        //        ->add('content')
+        //        ->add('image')
+        //        ->getForm();
+
+        //utilisation du formType
+        $form = $this -> createForm(ArticleType::class, $article);
+
 
         //analyse la requete
         $form ->handleRequest($request);
@@ -59,8 +70,11 @@ class BlogController extends AbstractController
 
         //vérifier si le formulaire a été soumis ET le formulaire est valide
         if ($form -> isSubmitted() && $form->isValid()){
-            $article -> setCreatedAt(new \DateTime());
-
+            //ici on précise que si l'article n'a pas d'identifiant
+            //alors on lui ajoute une date
+            if(!$article ->getId()){
+                $article -> setCreatedAt(new \DateTime());
+            }
             $manager -> persist($article);
             $manager -> flush();
 
@@ -72,7 +86,12 @@ class BlogController extends AbstractController
         }
             //on affiche le formulaire au premier passage
         return $this -> render ('blog/create.html.twig',[
-            'formArticle'=> $form ->createView()]);
+            'formArticle'=> $form ->createView(),
+            //ici on modifie le bouton en fonction de l'edit ou l'ajout
+            // editt mode ; boolean
+            'editMode' => $article -> getId()!==null
+        ]);
+
     }
 
 
