@@ -67,8 +67,8 @@ class __TwigTemplate_c69f17f929a80bd8812895c33e86c5fd4c2bf576e198bad7844b0226b01
         // line 5
         echo "<h1> Bienvenue sur l'Axoblog </h1>
 
- <p> ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
- <p> ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+ <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid deleniti dignissimos ea eum exercitationem non quam quasi reiciendis vel voluptatem.</p>
+ <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse eveniet quasi repellendus tenetur velit!</p>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -101,8 +101,8 @@ class __TwigTemplate_c69f17f929a80bd8812895c33e86c5fd4c2bf576e198bad7844b0226b01
 {% block body %}
 <h1> Bienvenue sur l'Axoblog </h1>
 
- <p> ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
- <p> ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
-{% endblock %}", "blog/home.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\Axoblog\\templates\\blog\\home.html.twig");
+ <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid deleniti dignissimos ea eum exercitationem non quam quasi reiciendis vel voluptatem.</p>
+ <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse eveniet quasi repellendus tenetur velit!</p>
+{% endblock %}", "blog/home.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\axoblog\\axoblog\\templates\\blog\\home.html.twig");
     }
 }

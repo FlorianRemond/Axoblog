@@ -63,6 +63,6 @@ class __TwigTemplate_0290cda089109aa23abeb48eb0f9ec15c269cca3c8aad1650ef9cab5358
     public function getSourceContext()
     {
         return new Source("<svg width=\"1792\" height=\"1792\" viewBox=\"0 0 1792 1792\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M1408 960V832q0-26-19-45t-45-19H448q-26 0-45 19t-19 45v128q0 26 19 45t45 19h896q26 0 45-19t19-45zm256-544v960q0 119-84.5 203.5T1376 1664H416q-119 0-203.5-84.5T128 1376V416q0-119 84.5-203.5T416 128h960q119 0 203.5 84.5T1664 416z\"/></svg>
-", "@Twig/images/icon-minus-square.svg", "C:\\Users\\Administrateur\\Desktop\\Stage\\Axoblog\\vendor\\symfony\\twig-bundle\\Resources\\views\\images\\icon-minus-square.svg");
+", "@Twig/images/icon-minus-square.svg", "C:\\Users\\Administrateur\\Desktop\\Stage\\axoblog\\axoblog\\vendor\\symfony\\twig-bundle\\Resources\\views\\images\\icon-minus-square.svg");
     }
 }

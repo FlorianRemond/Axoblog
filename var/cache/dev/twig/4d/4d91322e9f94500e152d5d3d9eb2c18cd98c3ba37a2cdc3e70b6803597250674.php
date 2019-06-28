@@ -227,6 +227,6 @@ class __TwigTemplate_101a90b036b2c0578f97cb093a529b26c1152c97b77ebdf230cd00d0434
         {{ include('@Twig/base_js.html.twig') }}
     </body>
 </html>
-", "@Twig/layout.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\Axoblog\\vendor\\symfony\\twig-bundle\\Resources\\views\\layout.html.twig");
+", "@Twig/layout.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\axoblog\\axoblog\\vendor\\symfony\\twig-bundle\\Resources\\views\\layout.html.twig");
     }
 }

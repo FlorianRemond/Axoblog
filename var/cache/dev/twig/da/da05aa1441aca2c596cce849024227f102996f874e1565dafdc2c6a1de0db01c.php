@@ -490,6 +490,6 @@ class __TwigTemplate_f09a6e1be9ff2a9ac112a0f6e89ad94398b40de5f65ed6a5f55e17fe5ef
         {% endif %}
     </div>
 </div>
-", "@Twig/Exception/exception.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\Axoblog\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\exception.html.twig");
+", "@Twig/Exception/exception.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\axoblog\\axoblog\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\exception.html.twig");
     }
 }

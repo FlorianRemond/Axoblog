@@ -128,6 +128,6 @@ class __TwigTemplate_32d1c2c42eb16382caaa4914a3fd6bb89b6355d44ff77ec8b1e2e088584
             </div>
         </article>
 
-{% endblock %}", "blog/show.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\Axoblog\\templates\\blog\\show.html.twig");
+{% endblock %}", "blog/show.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\axoblog\\axoblog\\templates\\blog\\show.html.twig");
     }
 }

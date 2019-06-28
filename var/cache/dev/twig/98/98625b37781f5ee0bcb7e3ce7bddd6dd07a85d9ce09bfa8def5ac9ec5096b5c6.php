@@ -161,6 +161,6 @@ class __TwigTemplate_c6c8a1fb86575febaf56508aa2953996ccdf6bed9d2f6e9f2f65509ae0d
         </tr>
     </tbody>
 </table>
-", "@Twig/Exception/traces_text.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\Axoblog\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces_text.html.twig");
+", "@Twig/Exception/traces_text.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\axoblog\\axoblog\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces_text.html.twig");
     }
 }

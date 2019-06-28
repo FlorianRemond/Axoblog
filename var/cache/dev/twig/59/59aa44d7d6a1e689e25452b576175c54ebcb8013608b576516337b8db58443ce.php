@@ -162,6 +162,6 @@ class __TwigTemplate_ce52b514abfdec6846dfba9a80ed48604eb743087630bb59492ba91afd4
         </article>
     {% endfor %}
 {% endblock %}
-", "blog/index.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\Axoblog\\templates\\blog\\index.html.twig");
+", "blog/index.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\axoblog\\axoblog\\templates\\blog\\index.html.twig");
     }
 }

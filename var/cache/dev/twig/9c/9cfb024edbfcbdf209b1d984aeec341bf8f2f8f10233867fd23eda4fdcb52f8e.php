@@ -52,16 +52,21 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        <link rel=\"stylesheet\"
-        href=\"https://bootswatch.com/4/flatly/bootstrap.min.css\">
+        <link rel=\"stylesheet\" href=\"";
+        // line 6
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bootstrap.min.css"), "html", null, true);
+        echo "\" >
         ";
-        // line 8
+        // line 7
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 9
+        // line 8
         echo "    </head>
     <body>
     <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
-  <a class=\"navbar-brand\" href=\"/\">Axoblog</a>
+  <a class=\"navbar-brand\" href=\"";
+        // line 11
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        echo "\">Axoblog</a>
 
   <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor01\" aria-controls=\"navbarColor01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
     <span class=\"navbar-toggler-icon\"></span>
@@ -70,23 +75,29 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
   <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
     <ul class=\"navbar-nav mr-auto\">
       <li class=\"nav-item \">
-        <a class=\"nav-link\" href=\"/blog\">Articles <span class=\"sr-only\">(current)</span></a>
+        <a class=\"nav-link\" href=\"";
+        // line 20
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog");
+        echo "\">Articles <span class=\"sr-only\">(current)</span></a>
       </li>
       <li class=\"nav-item\">
-        <a class=\"nav-link\" href=\"/blog/new\"> Creer un article</a>
+        <a class=\"nav-link\" href=\"";
+        // line 23
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog_create");
+        echo "\"> Creer un article</a>
       </li>
     </ul>
  </nav>
  <div class=\"container\"> 
         ";
-        // line 29
+        // line 28
         $this->displayBlock('body', $context, $blocks);
         echo " 
 </div>        
         ";
-        // line 31
+        // line 30
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 32
+        // line 31
         echo "    </body>
 </html>
 
@@ -109,7 +120,7 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Welcome!";
+        echo "Axoblog";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -118,7 +129,7 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
 
     }
 
-    // line 8
+    // line 7
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -136,7 +147,7 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
 
     }
 
-    // line 29
+    // line 28
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -154,7 +165,7 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
 
     }
 
-    // line 31
+    // line 30
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -177,9 +188,14 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  158 => 31,  140 => 29,  122 => 8,  103 => 5,  90 => 32,  88 => 31,  83 => 29,  61 => 9,  59 => 8,  53 => 5,  47 => 1,);
+        return array (  169 => 30,  151 => 28,  133 => 7,  114 => 5,  101 => 31,  99 => 30,  94 => 28,  86 => 23,  80 => 20,  68 => 11,  63 => 8,  61 => 7,  57 => 6,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -188,14 +204,13 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
 <html>
     <head>
         <meta charset=\"UTF-8\">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel=\"stylesheet\"
-        href=\"https://bootswatch.com/4/flatly/bootstrap.min.css\">
+        <title>{% block title %}Axoblog{% endblock %}</title>
+        <link rel=\"stylesheet\" href=\"{{ asset('bootstrap.min.css') }}\" >
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
     <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
-  <a class=\"navbar-brand\" href=\"/\">Axoblog</a>
+  <a class=\"navbar-brand\" href=\"{{ path('home') }}\">Axoblog</a>
 
   <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor01\" aria-controls=\"navbarColor01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
     <span class=\"navbar-toggler-icon\"></span>
@@ -204,10 +219,10 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
   <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
     <ul class=\"navbar-nav mr-auto\">
       <li class=\"nav-item \">
-        <a class=\"nav-link\" href=\"/blog\">Articles <span class=\"sr-only\">(current)</span></a>
+        <a class=\"nav-link\" href=\"{{ path ('blog') }}\">Articles <span class=\"sr-only\">(current)</span></a>
       </li>
       <li class=\"nav-item\">
-        <a class=\"nav-link\" href=\"/blog/new\"> Creer un article</a>
+        <a class=\"nav-link\" href=\"{{ path('blog_create') }}\"> Creer un article</a>
       </li>
     </ul>
  </nav>
@@ -218,6 +233,6 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
     </body>
 </html>
 
-", "base.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\Axoblog\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\axoblog\\axoblog\\templates\\base.html.twig");
     }
 }
