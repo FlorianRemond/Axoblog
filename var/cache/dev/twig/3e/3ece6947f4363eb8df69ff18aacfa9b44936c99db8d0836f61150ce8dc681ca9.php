@@ -95,31 +95,35 @@ class __TwigTemplate_58d0a33355299759e7d6c668420dc6e949b77df13b1d4eca38c0e1662ef
         echo "
         ";
         // line 19
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formArticle"]) || array_key_exists("formArticle", $context) ? $context["formArticle"] : (function () { throw new RuntimeError('Variable "formArticle" does not exist.', 19, $this->source); })()), "content", [], "any", false, false, false, 19), 'row', ["attr" => ["placeholder" => "Contenu de l'article"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formArticle"]) || array_key_exists("formArticle", $context) ? $context["formArticle"] : (function () { throw new RuntimeError('Variable "formArticle" does not exist.', 19, $this->source); })()), "category", [], "any", false, false, false, 19), 'row');
         echo "
         ";
         // line 20
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formArticle"]) || array_key_exists("formArticle", $context) ? $context["formArticle"] : (function () { throw new RuntimeError('Variable "formArticle" does not exist.', 20, $this->source); })()), "image", [], "any", false, false, false, 20), 'row', ["attr" => ["placeholder" => " URL de l'image"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formArticle"]) || array_key_exists("formArticle", $context) ? $context["formArticle"] : (function () { throw new RuntimeError('Variable "formArticle" does not exist.', 20, $this->source); })()), "content", [], "any", false, false, false, 20), 'row', ["attr" => ["placeholder" => "Contenu de l'article"]]);
+        echo "
+        ";
+        // line 21
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formArticle"]) || array_key_exists("formArticle", $context) ? $context["formArticle"] : (function () { throw new RuntimeError('Variable "formArticle" does not exist.', 21, $this->source); })()), "image", [], "any", false, false, false, 21), 'row', ["attr" => ["placeholder" => " URL de l'image"]]);
         echo "
 
            <button type=\"submit\" class=\"btn btn-success\">
                ";
-        // line 23
-        if ((isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 23, $this->source); })())) {
-            // line 24
+        // line 24
+        if ((isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 24, $this->source); })())) {
+            // line 25
             echo "               Enregistrer les modifications
                ";
         } else {
-            // line 26
+            // line 27
             echo "               Ajouter l'article
                ";
         }
-        // line 28
+        // line 29
         echo "           </button>
 
     ";
-        // line 30
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formArticle"]) || array_key_exists("formArticle", $context) ? $context["formArticle"] : (function () { throw new RuntimeError('Variable "formArticle" does not exist.', 30, $this->source); })()), 'form_end');
+        // line 31
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formArticle"]) || array_key_exists("formArticle", $context) ? $context["formArticle"] : (function () { throw new RuntimeError('Variable "formArticle" does not exist.', 31, $this->source); })()), 'form_end');
         echo "
 
 ";
@@ -143,7 +147,7 @@ class __TwigTemplate_58d0a33355299759e7d6c668420dc6e949b77df13b1d4eca38c0e1662ef
 
     public function getDebugInfo()
     {
-        return array (  122 => 30,  118 => 28,  114 => 26,  110 => 24,  108 => 23,  102 => 20,  98 => 19,  94 => 18,  89 => 16,  85 => 14,  81 => 12,  77 => 10,  75 => 9,  71 => 7,  61 => 6,  50 => 1,  48 => 3,  35 => 1,);
+        return array (  126 => 31,  122 => 29,  118 => 27,  114 => 25,  112 => 24,  106 => 21,  102 => 20,  98 => 19,  94 => 18,  89 => 16,  85 => 14,  81 => 12,  77 => 10,  75 => 9,  71 => 7,  61 => 6,  50 => 1,  48 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -166,6 +170,7 @@ class __TwigTemplate_58d0a33355299759e7d6c668420dc6e949b77df13b1d4eca38c0e1662ef
     {{ form_start(formArticle) }}
 
         {{ form_row(formArticle.title,{'attr':{'placeholder':\"Titre de l'article\"}}) }}
+        {{ form_row(formArticle.category)}}
         {{ form_row(formArticle.content,{'attr':{'placeholder':\"Contenu de l'article\"}}) }}
         {{ form_row(formArticle.image,{'attr':{'placeholder':\" URL de l'image\"}}) }}
 
