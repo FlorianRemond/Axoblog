@@ -180,6 +180,6 @@ class __TwigTemplate_58d0a33355299759e7d6c668420dc6e949b77df13b1d4eca38c0e1662ef
     {{ form_end(formArticle) }}
 
 {% endblock %}
-", "blog/create.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\axoblog\\axoblog\\templates\\blog\\create.html.twig");
+", "blog/create.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\axoblog\\templates\\blog\\create.html.twig");
     }
 }

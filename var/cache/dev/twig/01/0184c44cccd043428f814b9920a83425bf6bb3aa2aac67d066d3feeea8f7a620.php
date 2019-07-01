@@ -125,6 +125,6 @@ class __TwigTemplate_bba52029672af837fe4cfdcb3ef961fb4ce34be329f7f5531e9a80afbf0
         </div>
     </body>
 </html>
-", "@Twig/Exception/error.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\Axoblog\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\error.html.twig");
+", "@Twig/Exception/error.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\axoblog\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\error.html.twig");
     }
 }

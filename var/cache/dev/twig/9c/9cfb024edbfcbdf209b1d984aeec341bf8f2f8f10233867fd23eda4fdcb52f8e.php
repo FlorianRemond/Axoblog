@@ -47,24 +47,25 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
         echo "<!DOCTYPE html>
 <html>
     <head>
+
         <meta charset=\"UTF-8\">
         <title>";
-        // line 5
+        // line 6
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
         <link rel=\"stylesheet\" href=\"";
-        // line 6
+        // line 7
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bootstrap.min.css"), "html", null, true);
         echo "\" >
         ";
-        // line 7
-        $this->displayBlock('stylesheets', $context, $blocks);
         // line 8
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 9
         echo "    </head>
     <body>
     <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
   <a class=\"navbar-brand\" href=\"";
-        // line 11
+        // line 12
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">Axoblog</a>
 
@@ -76,13 +77,13 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
     <ul class=\"navbar-nav mr-auto\">
       <li class=\"nav-item \">
         <a class=\"nav-link\" href=\"";
-        // line 20
+        // line 21
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog");
         echo "\">Articles <span class=\"sr-only\">(current)</span></a>
       </li>
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"";
-        // line 23
+        // line 24
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog_create");
         echo "\"> Creer un article</a>
       </li>
@@ -90,14 +91,14 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
  </nav>
  <div class=\"container\"> 
         ";
-        // line 28
+        // line 29
         $this->displayBlock('body', $context, $blocks);
         echo " 
 </div>        
         ";
-        // line 30
-        $this->displayBlock('javascripts', $context, $blocks);
         // line 31
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 32
         echo "    </body>
 </html>
 
@@ -110,7 +111,7 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
 
     }
 
-    // line 5
+    // line 6
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -129,7 +130,7 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
 
     }
 
-    // line 7
+    // line 8
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -147,7 +148,7 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
 
     }
 
-    // line 28
+    // line 29
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -165,7 +166,7 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
 
     }
 
-    // line 30
+    // line 31
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -195,7 +196,7 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
 
     public function getDebugInfo()
     {
-        return array (  169 => 30,  151 => 28,  133 => 7,  114 => 5,  101 => 31,  99 => 30,  94 => 28,  86 => 23,  80 => 20,  68 => 11,  63 => 8,  61 => 7,  57 => 6,  53 => 5,  47 => 1,);
+        return array (  170 => 31,  152 => 29,  134 => 8,  115 => 6,  102 => 32,  100 => 31,  95 => 29,  87 => 24,  81 => 21,  69 => 12,  64 => 9,  62 => 8,  58 => 7,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -203,6 +204,7 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
         return new Source("<!DOCTYPE html>
 <html>
     <head>
+
         <meta charset=\"UTF-8\">
         <title>{% block title %}Axoblog{% endblock %}</title>
         <link rel=\"stylesheet\" href=\"{{ asset('bootstrap.min.css') }}\" >
@@ -233,6 +235,6 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
     </body>
 </html>
 
-", "base.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\axoblog\\axoblog\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\axoblog\\templates\\base.html.twig");
     }
 }
