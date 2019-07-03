@@ -23,4 +23,5 @@ return [
     'exit' => [[], ['_controller' => 'App\\Controller\\ExitController::index'], [], [['text', '/exit']], [], []],
     'security_registration' => [[], ['_controller' => 'App\\Controller\\SecurityController::registration'], [], [['text', '/inscription']], [], []],
     'security_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/connexion']], [], []],
+    'security_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/deconnexion']], [], []],
 ];

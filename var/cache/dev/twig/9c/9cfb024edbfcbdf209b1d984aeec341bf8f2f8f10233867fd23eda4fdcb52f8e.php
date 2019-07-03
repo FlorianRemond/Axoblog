@@ -87,18 +87,40 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog_create");
         echo "\"> Creer un article</a>
       </li>
-    </ul>
+        ";
+        // line 26
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 26, $this->source); })()), "user", [], "any", false, false, false, 26)) {
+            // line 27
+            echo "        <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"";
+            // line 28
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_login");
+            echo "\"> Connexion</a>
+        </li>
+        ";
+        } else {
+            // line 31
+            echo "        <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"";
+            // line 32
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_logout");
+            echo "\"> Déconnexion</a>
+        </li>
+        ";
+        }
+        // line 35
+        echo "    </ul>
  </nav>
  <div class=\"container\"> 
         ";
-        // line 29
+        // line 38
         $this->displayBlock('body', $context, $blocks);
         echo " 
 </div>        
         ";
-        // line 31
+        // line 40
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 32
+        // line 41
         echo "    </body>
 </html>
 
@@ -148,7 +170,7 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
 
     }
 
-    // line 29
+    // line 38
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -166,7 +188,7 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
 
     }
 
-    // line 31
+    // line 40
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -196,7 +218,7 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
 
     public function getDebugInfo()
     {
-        return array (  170 => 31,  152 => 29,  134 => 8,  115 => 6,  102 => 32,  100 => 31,  95 => 29,  87 => 24,  81 => 21,  69 => 12,  64 => 9,  62 => 8,  58 => 7,  54 => 6,  47 => 1,);
+        return array (  192 => 40,  174 => 38,  156 => 8,  137 => 6,  124 => 41,  122 => 40,  117 => 38,  112 => 35,  106 => 32,  103 => 31,  97 => 28,  94 => 27,  92 => 26,  87 => 24,  81 => 21,  69 => 12,  64 => 9,  62 => 8,  58 => 7,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -226,6 +248,15 @@ class __TwigTemplate_1048d9ec44467f4bb5310f7a3d490bec4424151c687c5431cdfafe3ec44
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"{{ path('blog_create') }}\"> Creer un article</a>
       </li>
+        {% if not app.user  %}
+        <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"{{ path('security_login') }}\"> Connexion</a>
+        </li>
+        {% else %}
+        <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"{{ path('security_logout') }}\"> Déconnexion</a>
+        </li>
+        {% endif %}
     </ul>
  </nav>
  <div class=\"container\"> 

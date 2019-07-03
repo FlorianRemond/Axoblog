@@ -67,6 +67,22 @@ class __TwigTemplate_ece0deebfccc7e6e2d72792990d1db088031058d85a3c20caeca995778b
         // line 3
         echo "    <h1>Connexion</h1>
 
+    <form action=\"";
+        // line 5
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_login");
+        echo "\" method=\"post\">
+        <div class=\"form-group\">
+            <input placeholder=\"Adresse mail...\" required name=\"_username\" type=\"text\"
+            class=\"form-control\">
+        </div>
+        <div class=\"form-group\">
+        <input placeholder=\"Mot de passe\"  required name=\"_password\" type=\"password\"
+               class=\"form-control\">
+        </div>
+        <div class=\"form-group\">
+            <button type=\"submit\" class=\"btn btn-success\">Connexion !</button>
+        </div>
+    </form>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -88,7 +104,7 @@ class __TwigTemplate_ece0deebfccc7e6e2d72792990d1db088031058d85a3c20caeca995778b
 
     public function getDebugInfo()
     {
-        return array (  68 => 3,  58 => 2,  35 => 1,);
+        return array (  72 => 5,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -97,6 +113,19 @@ class __TwigTemplate_ece0deebfccc7e6e2d72792990d1db088031058d85a3c20caeca995778b
 {% block body %}
     <h1>Connexion</h1>
 
+    <form action=\"{{ path('security_login') }}\" method=\"post\">
+        <div class=\"form-group\">
+            <input placeholder=\"Adresse mail...\" required name=\"_username\" type=\"text\"
+            class=\"form-control\">
+        </div>
+        <div class=\"form-group\">
+        <input placeholder=\"Mot de passe\"  required name=\"_password\" type=\"password\"
+               class=\"form-control\">
+        </div>
+        <div class=\"form-group\">
+            <button type=\"submit\" class=\"btn btn-success\">Connexion !</button>
+        </div>
+    </form>
 {% endblock %}", "security\\login.html.twig", "C:\\Users\\Administrateur\\Desktop\\Stage\\axoblog\\templates\\security\\login.html.twig");
     }
 }
