@@ -21,4 +21,6 @@ return [
     'blog_edit' => [['id'], ['_controller' => 'App\\Controller\\BlogController::form'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/blog']], [], []],
     'blog_show' => [['id'], ['_controller' => 'App\\Controller\\BlogController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/blog/show']], [], []],
     'exit' => [[], ['_controller' => 'App\\Controller\\ExitController::index'], [], [['text', '/exit']], [], []],
+    'security_registration' => [[], ['_controller' => 'App\\Controller\\SecurityController::registration'], [], [['text', '/inscription']], [], []],
+    'security_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/connexion']], [], []],
 ];
